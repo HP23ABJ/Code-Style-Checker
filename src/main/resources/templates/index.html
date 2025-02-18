@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Code Style Checker</title>
+</head>
+<body>
+
+<h2>Upload Java File for Analysis</h2>
+
+<form th:action="@{/upload}" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept=".java" required>
+    <button type="submit">Analyze Code</button>
+</form>
+
+</body>
+</html>

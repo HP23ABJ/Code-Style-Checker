@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Code Analysis Results</title>
+</head>
+<body>
+
+<h2>Code Analysis Results</h2>
+
+<!-- Display Issues -->
+<div>
+    <h3>Issues:</h3>
+    <ul>
+        <li th:each="issue : ${results['issues']}" th:text="${issue}"></li>
+    </ul>
+</div>
+
+<!-- Display Warnings -->
+<div>
+    <h3>Warnings:</h3>
+    <ul>
+        <li th:each="warning : ${results['warnings']}" th:text="${warning}"></li>
+    </ul>
+</div>
+
+<!-- Back to Upload -->
+<a th:href="@{/}">Upload Another File</a>
+
+</body>
+</html>
